@@ -1,3 +1,1 @@
-# jiannawong.github.io
-
-[jiannawong.github.io](https://jiannawong.github.io/))
+[Portfolio Site](https://jiannawong.github.io/portfolio))
