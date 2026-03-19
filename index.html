@@ -32,16 +32,22 @@
                     social impact and better decision-making.
                 </p>
                 
-                <div class="mt-8">
-                    <div class="flex flex-wrap gap-4">
+                <div class="mt-10">
+                    <div class="flex flex-wrap gap-6">
                         <button onclick="toggleCoursework('uw-courses')" 
-                                class="px-6 py-3 bg-purple-50 text-purple-700 text-sm font-bold rounded-lg border border-purple-100 shadow-sm hover:shadow-md hover:bg-purple-100 transition-all cursor-pointer">
-                            MS Data Science @ UW
+                                class="group text-left px-8 py-5 bg-purple-50 text-purple-700 rounded-2xl border-2 border-purple-100 shadow-sm hover:shadow-lg hover:bg-purple-100 transition-all cursor-pointer flex-1 min-w-[280px]">
+                            <span class="block text-xl font-black mb-1">MS Data Science @ UW</span>
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
+                                🖱️ Click to see relevant courses
+                            </span>
                         </button>
                 
                         <button onclick="toggleCoursework('ucsb-courses')" 
-                                class="px-6 py-3 bg-blue-50 text-blue-700 text-sm font-bold rounded-lg border border-blue-100 shadow-sm hover:shadow-md hover:bg-blue-100 transition-all cursor-pointer">
-                            BS Stats & Psych @ UCSB
+                                class="group text-left px-8 py-5 bg-blue-50 text-blue-700 rounded-2xl border-2 border-blue-100 shadow-sm hover:shadow-lg hover:bg-blue-100 transition-all cursor-pointer flex-1 min-w-[280px]">
+                            <span class="block text-xl font-black mb-1">BS Stats & Psych @ UCSB</span>
+                            <span class="text-xs font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">
+                                🖱️ Click to see relevant courses
+                            </span>
                         </button>
                     </div>
                 
@@ -59,11 +65,11 @@
                 
                     <div id="ucsb-courses" class="hidden mt-4 p-6 bg-white border border-blue-100 rounded-xl shadow-inner animate-fade-in">
                         <h5 class="font-bold text-blue-800 mb-3 text-sm uppercase tracking-wider">Relevant Coursework (UCSB)</h5>
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-slate-600 font-medium">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm text-slate-600 font-medium">
                             <span>• Big Data Analytics</span>
                             <span>• Data Science Concepts and Analysis</span>
                             <span>• Machine Learning</span>
-                            <span>• Time Series /span>
+                            <span>• Time Series</span>
                             <span>• Advanced Statistical Models</span>
                             <span>• Principles of Data Science</span>
                             <span>• Math Finance</span>
@@ -189,38 +195,50 @@
                 <span class="mr-3">🛠</span> Technical Toolkit
             </h3>
         
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
-                    <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-xl">💻</div>
-                    <h4 class="font-bold text-slate-900 mb-3">Programming & Analysis</h4>
-                    <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-                        <li>R (Tidyverse, ggplot2)</li>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>Statistical Modeling & Hypothesis Testing</li>
-                    </ul>
+            <section id="skills" class="max-w-4xl mx-auto py-16 px-6">
+                <h3 class="text-2xl font-bold mb-10 border-b pb-2 text-slate-800 flex items-center">
+                    <span class="mr-3">🛠</span> Technical Toolkit
+                </h3>
+            
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-xl">💻</div>
+                        <h4 class="font-bold text-slate-900 mb-3">Languages & Frameworks</h4>
+                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
+                            <li><strong>Python:</strong> Pandas, NumPy, Scikit-learn, PyTorch, OpenCV</li>
+                            <li><strong>R & SQL:</strong> Tidyverse, ggplot2, SparkSQL</li>
+                            <li><strong>Other:</strong> MATLAB, SAS, MATLAB</li>
+                        </ul>
+                    </div>
+            
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-purple-200 transition">
+                        <div class="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center mb-4 text-xl">☁️</div>
+                        <h4 class="font-bold text-slate-900 mb-3">Cloud & Big Data</h4>
+                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
+                            <li><strong>Platforms:</strong> Databricks, AzureML, Google Cloud</li>
+                            <li><strong>Processing:</strong> PySpark, SparkSQL</li>
+                            <li><strong>Data Mining:</strong> RapidMiner, OpenRefine</li>
+                        </ul>
+                    </div>
+            
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-green-200 transition">
+                        <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mb-4 text-xl">🚀</div>
+                        <h4 class="font-bold text-slate-900 mb-3">Dashboards & Apps</h4>
+                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
+                            <li><strong>BI Tools:</strong> Tableau, Excel (MS Office)</li>
+                            <li><strong>App Frameworks:</strong> Streamlit, Dash, Tkinter</li>
+                            <li><strong>Communication:</strong> Technical Writing, Storytelling</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-orange-200 transition">
+                        <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center mb-4 text-xl">🧠</div>
+                        <h4 class="font-bold text-slate-900 mb-3">Strategic & Soft Skills</h4>
+                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
+                            <li><strong>Data Storytelling:</strong> Translating complex models for non-technical stakeholders.</li>
+                            <li><strong>Cross-Functional Collaboration:</strong> Working across engineering and product teams.</li>
+                            <li><strong>Analytical Thinking:</strong> Bridging psychological theory with statistical rigor.</li>
+                            <li><strong>Project Management:</strong> End-to-end ownership of the data lifecycle.</li>
+                        </ul>
+                    </div>
                 </div>
-        
-                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-purple-200 transition">
-                    <div class="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center mb-4 text-xl">⚙️</div>
-                    <h4 class="font-bold text-slate-900 mb-3">Engineering & Workflow</h4>
-                    <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                        <li>API Integration (REST, JSON)</li>
-                        <li>Git & GitHub (Version Control)</li>
-                        <li>CI/CD (GitHub Actions)</li>
-                        <li>Conda & Environment Management</li>
-                    </ul>
-                </div>
-        
-                <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-green-200 transition">
-                    <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mb-4 text-xl">📊</div>
-                    <h4 class="font-bold text-slate-900 mb-3">Visualization & Insights</h4>
-                    <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                        <li>Tableau (Interactive Dashboards)</li>
-                        <li>Data Storytelling</li>
-                        <li>Matplotlib & Seaborn</li>
-                        <li>User Experience (UX) Research</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
