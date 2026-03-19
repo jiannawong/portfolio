@@ -6,7 +6,7 @@
     <title>Jianna Wong | Data Science Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<<body class="bg-gray-50 text-gray-900 font-sans">
     <nav class="p-6 bg-white shadow-sm flex justify-between items-center sticky top-0 z-50">
         <h1 class="text-xl font-bold tracking-tight text-slate-800">Jianna Wong</h1>
         <div class="space-x-8 text-sm font-medium">
@@ -14,370 +14,225 @@
             <a href="#experience" class="hover:text-blue-600">Experience</a>
             <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
             <a href="#skills" class="hover:text-blue-600">Skills</a>
-            <a href="#viz" class="hover:text-blue-600 transition">Dashboards</a>
             <a href="https://github.com/jiannawong" target="_blank" class="hover:text-blue-600 border-l pl-8 border-slate-200">GitHub</a>
         </div>
     </nav>
 
-    <section id="about" class="max-w-4xl mx-auto py-24 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-            <div class="md:col-span-2">
-                <h2 class="text-4xl font-extrabold mb-6 text-slate-900">Hi, I'm Jianna.</h2>
-                <p class="text-lg text-slate-600 leading-relaxed mb-6">
-                    I am currently a <strong>Master of Science in Data Science</strong> student at the <strong>University of Washington</strong>. 
-                    My journey started at UC Santa Barbara, where I double-majored in <strong>Psychological and Brain Sciences</strong> 
-                    and <strong>Statistics and Data Science</strong>.
-                </p>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    I am passionate about bridging the gap between technical complexity and human understanding. I specialize in 
-                    transforming messy, high-dimensional data into meaningful stories and interpretable results that drive 
-                    social impact and better decision-making.
-                </p>
-                
-                <div class="mt-10">
-                    <div class="flex flex-wrap gap-6">
-                        <button onclick="openModal('uw-modal')" 
-                                class="group text-left px-8 py-6 bg-purple-50 text-purple-700 rounded-2xl border-2 border-purple-100 shadow-sm hover:shadow-xl hover:bg-purple-100 transition-all cursor-pointer flex-1 min-w-[280px]">
-                            <span class="block text-xl font-black mb-1 leading-tight">MS Data Science @ UW</span>
-                            <span class="text-xs font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100">🖱️ Click to see relevant courses</span>
-                        </button>
-                
-                        <button onclick="openModal('ucsb-modal')" 
-                                class="group text-left px-8 py-6 bg-blue-50 text-blue-700 rounded-2xl border-2 border-blue-100 shadow-sm hover:shadow-xl hover:bg-blue-100 transition-all cursor-pointer flex-1 min-w-[280px]">
-                            <span class="block text-xl font-black mb-1 leading-tight">BS Stats & Psych @ UCSB</span>
-                            <span class="text-xs font-bold uppercase tracking-widest opacity-60 group-hover:opacity-100">🖱️ Click to see relevant courses</span>
-                        </button>
-                    </div>
-                </div>
-                
-                <div id="modal-backdrop" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] transition-opacity duration-300 flex items-center justify-center p-6" onclick="closeModal()">
+    <div class="max-w-4xl mx-auto px-6">
+        
+        <section id="about" class="py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h2 class="text-4xl font-extrabold mb-6 text-slate-900">Hi, I'm Jianna.</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        I am currently a <strong>Master of Science in Data Science</strong> student at the <strong>University of Washington</strong>. 
+                        My journey started at UC Santa Barbara, where I double-majored in <strong>Psychological and Brain Sciences</strong> 
+                        and <strong>Statistics and Data Science</strong>.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        I am passionate about bridging the gap between technical complexity and human understanding. I specialize in 
+                        transforming messy, high-dimensional data into meaningful stories and interpretable results.
+                    </p>
                     
-                    <div id="uw-modal" class="hidden bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-10 transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
-                        <div class="flex justify-between items-start mb-6">
-                            <h5 class="text-2xl font-black text-purple-800">Relevant Coursework (UW)</h5>
-                            <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-semibold border-t pt-6">
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Data Visualizations</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Probability & Statistics</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Applied Statistics and Experimental Design</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Data Management for Data Science</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Software Design</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-purple-400 rounded-full mr-3"></span> Statistical Machine Learning</div>
-                        </div>
-                    </div>
-                
-                    <div id="ucsb-modal" class="hidden bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-10 transform scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
-                        <div class="flex justify-between items-start mb-6">
-                            <h5 class="text-2xl font-black text-blue-800">Relevant Coursework (UCSB)</h5>
-                            <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-slate-600 font-semibold border-t pt-6">
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Big Data Analytics</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Data Science Concepts and Analysis</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Machine Learning</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Time Series</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Advanced Statistical Models</div>
-                            <div class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-3"></span> Math Finance</div>
+                    <div class="mt-10">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button onclick="openModal('uw-modal')" class="group text-left px-6 py-4 bg-purple-50 text-purple-700 rounded-2xl border-2 border-purple-100 shadow-sm hover:shadow-lg hover:bg-purple-100 transition-all cursor-pointer">
+                                <span class="block text-lg font-black leading-tight">MS Data Science @ UW</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">🖱️ Click for courses</span>
+                            </button>
+                            <button onclick="openModal('ucsb-modal')" class="group text-left px-6 py-4 bg-blue-50 text-blue-700 rounded-2xl border-2 border-blue-100 shadow-sm hover:shadow-lg hover:bg-blue-100 transition-all cursor-pointer">
+                                <span class="block text-lg font-black leading-tight">BS Stats & Psych @ UCSB</span>
+                                <span class="text-[10px] font-bold uppercase tracking-widest opacity-60">🖱️ Click for courses</span>
+                            </button>
                         </div>
                     </div>
                 </div>
-                
-                <script>
-                    function toggleCoursework(id) {
-                        const target = document.getElementById(id);
-                        const allBoxes = ['uw-courses', 'ucsb-courses'];
-                        
-                        // Hide others and toggle target
-                        allBoxes.forEach(boxId => {
-                            const box = document.getElementById(boxId);
-                            if (boxId === id) {
-                                box.classList.toggle('hidden');
-                            } else {
-                                box.classList.add('hidden');
-                            }
-                        });
-                    }
-                    function openModal(modalId) {
-                        const backdrop = document.getElementById('modal-backdrop');
-                        const modal = document.getElementById(modalId);
-                        
-                        // Reset any other open modals
-                        document.getElementById('uw-modal').classList.add('hidden');
-                        document.getElementById('ucsb-modal').classList.add('hidden');
-
-                        // Show backdrop and specific modal
-                        backdrop.classList.remove('hidden');
-                        modal.classList.remove('hidden');
-                        
-                        // Small delay to allow CSS transitions to pop
-                        setTimeout(() => {
-                            modal.classList.remove('scale-95');
-                            modal.classList.add('scale-100');
-                        }, 10);
-                        
-                        // Prevent body scrolling while modal is open
-                        document.body.style.overflow = 'hidden';
-                    }
-
-                    function closeModal() {
-                        const backdrop = document.getElementById('modal-backdrop');
-                        backdrop.classList.add('hidden');
-                        document.body.style.overflow = 'auto';
-                    }
-                </script>
-                
-                
-                <style>
-                    .animate-fade-in {
-                        animation: fadeIn 0.3s ease-in-out;
-                    }
-                    @keyframes fadeIn {
-                        from { opacity: 0; transform: translateY(-10px); }
-                        to { opacity: 1; transform: translateY(0); }
-                    }
-                </style>
-
-                </div>  
 
                 <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-10 rounded-3xl shadow-xl text-white mt-4 md:mt-12">
                     <h4 class="text-xs font-bold uppercase tracking-[0.2em] opacity-80 mb-6 border-b border-white/20 pb-2">Programming Languages</h4>
                     <ul class="space-y-4 text-lg font-semibold">
-                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4 shadow-[0_0_8px_rgba(147,197,253,0.8)]"></span> Python</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4 shadow-[0_0_8px_rgba(147,197,253,0.8)]"></span> R</li>
-                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4 shadow-[0_0_8px_rgba(147,197,253,0.8)]"></span> SQL</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4"></span> Python</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4"></span> R</li>
+                        <li class="flex items-center"><span class="w-2 h-2 bg-blue-300 rounded-full mr-4"></span> SQL</li>
                     </ul>
+                </div>
             </div>
-        </div>
-    
-        <section id="experience" class="max-w-4xl mx-auto py-16 px-6">
+        </section>
+
+        <hr class="border-slate-200">
+
+        <section id="experience" class="py-20">
             <h3 class="text-2xl font-bold mb-10 border-b pb-2 text-slate-800 flex items-center">
                 <span class="mr-3">💼</span> Professional Experience
             </h3>
-        
             <div class="space-y-12">
                 <div class="relative pl-8 border-l-2 border-slate-200">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
                     <div class="flex flex-col md:flex-row justify-between items-start mb-2">
                         <div>
                             <h4 class="text-xl font-bold text-slate-900">Algorithm Developer Intern</h4>
-                            <p class="text-blue-600 font-semibold italic">Applied Materials • Santa Clara, CA</p>
+                            <p class="text-blue-600 font-semibold italic text-sm">Applied Materials • Santa Clara, CA</p>
                         </div>
-                        <span class="text-sm font-bold text-slate-400 mt-1 md:mt-0 uppercase tracking-wider">June 2024 — Sept 2024</span>
+                        <span class="text-xs font-bold text-slate-400 mt-1 md:mt-0 uppercase tracking-wider">June 2024 — Sept 2024</span>
                     </div>
-                    <ul class="text-slate-600 space-y-3 mt-4 text-sm leading-relaxed list-disc ml-4">
-                        <li>Developed a <strong>Computer Vision</strong> solution using OpenCV to classify normal vs. defective wafer dies.</li>
-                        <li>Achieved <strong>94% accuracy</strong> with a Deep Learning model (MobileNet) trained on 40,000 images, outperforming Random Forest and SVM baselines.</li>
-                        <li>Engineered a <strong>Tkinter-based GUI</strong> to automate die extraction and generate color-coded defect maps for intuitive interpretation.</li>
-                        <li>Collaborated with an international R&D team to integrate tools into existing production workflows.</li>
+                    <ul class="text-slate-600 space-y-2 mt-4 text-sm list-disc ml-4">
+                        <li>Developed <strong>Computer Vision</strong> solutions using OpenCV to classify defective wafer dies.</li>
+                        <li>Achieved <strong>94% accuracy</strong> with MobileNet, outperforming traditional ML baselines.</li>
+                        <li>Engineered a <strong>Tkinter-based GUI</strong> for automated defect mapping and visualization.</li>
                     </ul>
                 </div>
-        
                 <div class="relative pl-8 border-l-2 border-slate-200">
                     <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-300 rounded-full border-4 border-white"></div>
                     <div class="flex flex-col md:flex-row justify-between items-start mb-2">
                         <div>
                             <h4 class="text-xl font-bold text-slate-900">Research Assistant</h4>
-                            <p class="text-blue-600 font-semibold italic">Bionic Vision Lab • Santa Barbara, CA</p>
+                            <p class="text-blue-600 font-semibold italic text-sm">Bionic Vision Lab • Santa Barbara, CA</p>
                         </div>
-                        <span class="text-sm font-bold text-slate-400 mt-1 md:mt-0 uppercase tracking-wider">Sept 2023 — June 2025</span>
+                        <span class="text-xs font-bold text-slate-400 mt-1 md:mt-0 uppercase tracking-wider">Sept 2023 — June 2025</span>
                     </div>
-                    <ul class="text-slate-600 space-y-3 mt-4 text-sm leading-relaxed list-disc ml-4">
-                        <li>Compared scene description ratings across <strong>BERT, SBERT, and ChatGPT</strong> to assess AI alignment with human judgment.</li>
-                        <li>Applied <strong>Image Processing</strong> and ML methods to research on simulated vision and degenerative eye diseases.</li>
-                        <li>Designed and conducted <strong>eye-tracking studies</strong> and a spatial navigation <strong>VR task built in Unity</strong>.</li>
-                        <li>Cleaned and preprocessed textual data in Python, analyzing error counts across varying viewing conditions.</li>
+                    <ul class="text-slate-600 space-y-2 mt-4 text-sm list-disc ml-4">
+                        <li>Compared NLP ratings across <strong>BERT, SBERT, and ChatGPT</strong> for AI alignment studies.</li>
+                        <li>Designed <strong>eye-tracking studies</strong> and spatial navigation tasks in Unity VR.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <div class="max-w-4xl mx-auto px-6"><hr class="border-slate-200"></div>
-
-        <section id="projects" class="mb-20">
+        <section id="projects" class="py-20">
             <h3 class="text-2xl font-bold mb-12 border-b pb-2 text-slate-800">Technical Projects</h3>
             
             <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-12">
-                </div>
-        </section>
-                
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="p-8 border-b border-gray-50 bg-slate-50">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                            <div>
-                                <h4 class="text-2xl font-bold text-gray-900">Cooking Helper!</h4>
-                                <p class="text-blue-600 font-medium text-sm mt-1 tracking-wide uppercase">Python • API Integration • CI/CD • PlotlyDash </p>
-                            </div>
-                            <a href="https://github.com/ventikaa/data515-proj" 
-                            target="_blank" 
-                            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                                View Repository 
-                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-    
-            <div class="p-8">
-                <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Project Overview</h5>
-                <p class="text-gray-600 leading-relaxed mb-8">
-                    Developed an end-to-end grocery planning tool designed to reduce barriers to home cooking for individuals in <strong>food desert regions</strong>. 
-                    The system enables users to select recipes from a database of 500k+ records and automatically generates a store-specific grocery list with 
-                    <strong>real-time pricing and availability</strong>.
-                </p>
-    
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="p-8 border-b border-gray-50 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
-                        <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Technical Implementation</h5>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>Data Pipeline:</strong> Automated ingestion and normalization of large-scale Kaggle recipe datasets.</li>
-                            <li><strong>API Integration:</strong> Real-time retail data fetching via the <strong>Kroger Development API</strong>.</li>
-                            <li><strong>Environment:</strong> Managed dependencies and reproducibility using <strong>Conda</strong>.</li>
-                        </ul>
+                        <h4 class="text-2xl font-bold text-gray-900">Cooking Helper!</h4>
+                        <p class="text-blue-600 font-medium text-sm mt-1 tracking-wide uppercase font-mono">Python • API Integration • CI/CD • PlotlyDash</p>
                     </div>
-                    <div>
-                        <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Engineering Excellence</h5>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>CI/CD:</strong> Implemented automated build and test workflows via <strong>GitHub Actions</strong>.</li>
-                            <li><strong>Quality Assurance:</strong> Maintained high code reliability with <strong>Coveralls</strong> for coverage tracking.</li>
-                            <li><strong>Visualization:</strong> Integrated spatial food access data via interactive map components.</li>
-                        </ul>
-                    </div>
+                    <a href="https://github.com/ventikaa/data515-proj" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200">View Repository</a>
                 </div>
-            
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <div class="p-8 border-b border-gray-50 bg-slate-50">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div>
-                            <h4 class="text-2xl font-bold text-gray-900">U.S. Hospital Satisfaction (2016–2020)</h4>
-                            <p class="text-blue-600 font-medium text-sm mt-1 tracking-wide uppercase">Interactive Data Storytelling • Tableau • Tableau Prep</p>
-                        </div>
-                        <a href="https://public.tableau.com/views/HospitalRatingsDashboard/HospitalSatisfaction?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" 
-                           target="_blank" 
-                           class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                            View Interactive Dashboard 
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="box-arrow-up-right" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                        </a>
-                    </div>
-                </div>
-        
                 <div class="p-8">
-                    <h5 class="font-bold text-gray-800 mb-3">Executive Summary</h5>
-                    <p class="text-gray-600 leading-relaxed mb-8">
-                        The United States is a melting pot of environments; however, the need for quality medical care is universal. 
-                        This project assesses satisfaction rates across the country to inform communities of how their local hospitals 
-                        compare to nationwide standards. Using a top-down geographical approach, we visualized data from over <strong>4,300 unique hospitals</strong> 
-                        across 53 states and territories.
-                    </p>
-        
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <p class="text-gray-600 mb-8">Developed a grocery planning tool for food deserts using the <strong>Kroger API</strong> and 500k+ records.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                         <div>
-                            <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">The Design Process</h5>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                                <strong>Data Engineering:</strong> Merged five years of HCAHPS datasets (1.6M+ records) in Python. 
-                                We pivoted the data from wide to tall format to standardize satisfaction indicators like 
-                                <em>Nurse Communication</em> and <em>Cleanliness</em>.
-                            </p>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                <strong>Geocoding:</strong> Leveraged the <strong>Google Maps API</strong> to map exact hospital 
-                                coordinates, ensuring high-fidelity spatial accuracy in the final visualization.
-                            </p>
+                            <h5 class="font-bold text-slate-800 mb-2 uppercase text-xs tracking-widest">Implementation</h5>
+                            <p class="text-slate-600">Automated data ingestion with Python; managed environments via Conda.</p>
                         </div>
                         <div>
-                            <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Key Findings & Testing</h5>
-                            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                                <strong>Insights:</strong> Identified that while clinical communication is generally high (3.41 stars), 
-                                environmental factors like <em>Quietness</em> (2.97 stars) remain significant pain points for patients.
-                            </p>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                <strong>Usability:</strong> Conducted evaluations with healthcare professionals (nurses, pharmacists) 
-                                to refine the "drill-down" navigation from state to county to specific facility.
-                            </p>
+                            <h5 class="font-bold text-slate-800 mb-2 uppercase text-xs tracking-widest">Engineering</h5>
+                            <p class="text-slate-600">CI/CD via GitHub Actions; coverage tracked with Coveralls.</p>
                         </div>
                     </div>
                 </div>
             </div>
-    
-                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                    <div class="p-8 border-b border-gray-50 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                        <div>
-                            <div class="flex items-center gap-2 mb-1">
-                                <h4 class="text-2xl font-bold text-gray-900">Big Data Analysis: U.S. Voter Turnout</h4>
-                                <span class="px-2 py-1 bg-gray-200 text-gray-700 text-[10px] font-bold uppercase rounded">Case Study</span>
-                            </div>
-                            <p class="text-blue-600 font-medium text-sm tracking-wide uppercase">PySpark • Databricks • Distributed Computing</p>
-                        </div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">UCSB • June 2025</span>
-                    </div>
-            
-                    <div class="p-8">
-                        <p class="text-gray-600 leading-relaxed mb-8">
-                            Leveraged <strong>Databricks</strong> and <strong>PySpark</strong> to process millions of records, analyzing how household demographics affect civic engagement. I built a scalable pipeline to categorize voter segments and visualized geographic patterns through custom choropleth maps.
-                        </p>
-            
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div>
-                                <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Technical Highlights</h5>
-                                <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                                    <li><strong>Scalable Processing:</strong> Implemented custom PySpark UDFs for demographic segmentation of large-scale datasets.</li>
-                                    <li><strong>Modeling:</strong> Compared Logistic Regression and Random Forest variants in a distributed computing environment.</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h5 class="font-bold text-gray-800 mb-3 uppercase text-xs tracking-widest">Key Discovery</h5>
-                                <p class="text-sm text-slate-600 leading-relaxed italic">
-                                    "Analysis revealed that homeownership is a primary driver of turnout, while single-person households showed the lowest probability of voting across all segments."
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="bg-white rounded-xl shadow-sm border border
-            <section id="skills" class="py-16">
-                <h3 class="text-2xl font-bold mb-12 border-b pb-2 text-slate-800">Technical Toolkit</h3>
 
-            
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
-                        <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-xl">💻</div>
-                        <h4 class="font-bold text-slate-900 mb-3">Languages & Frameworks</h4>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>Python:</strong> Pandas, NumPy, Scikit-learn, PyTorch, OpenCV</li>
-                            <li><strong>R & SQL:</strong> Tidyverse, ggplot2, SparkSQL</li>
-                            <li><strong>Other:</strong> MATLAB, SAS</li>
-                        </ul>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-12">
+                <div class="p-8 border-b border-gray-50 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-900">U.S. Hospital Satisfaction</h4>
+                        <p class="text-blue-600 font-medium text-sm mt-1 tracking-wide uppercase font-mono">Tableau • Tableau Prep • Data Storytelling</p>
                     </div>
-            
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-purple-200 transition">
-                        <div class="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center mb-4 text-xl">☁️</div>
-                        <h4 class="font-bold text-slate-900 mb-3">Cloud & Big Data</h4>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>Platforms:</strong> Databricks, AzureML, Google Cloud</li>
-                            <li><strong>Processing:</strong> PySpark, SparkSQL</li>
-                            <li><strong>Data Mining:</strong> RapidMiner, OpenRefine</li>
-                        </ul>
-                    </div>
-            
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-green-200 transition">
-                        <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mb-4 text-xl">🚀</div>
-                        <h4 class="font-bold text-slate-900 mb-3">Dashboards & Apps</h4>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>BI Tools:</strong> Tableau, Excel (MS Office)</li>
-                            <li><strong>App Frameworks:</strong> Streamlit, Dash, Tkinter</li>
-                            <li><strong>Communication:</strong> Technical Writing, Storytelling</li>
-                        </ul>
-                    </div>
-                    <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-orange-200 transition">
-                        <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center mb-4 text-xl">🧠</div>
-                        <h4 class="font-bold text-slate-900 mb-3">Strategic & Soft Skills</h4>
-                        <ul class="text-sm text-slate-600 space-y-2 font-medium">
-                            <li><strong>Data Storytelling</strong></li>
-                            <li><strong>Cross-Functional Collaboration</strong></li>
-                            <li><strong>Analytical Thinking</strong></li>
-                            <li><strong>Project Management</strong></li>
-                            <li><strong>Problem Solving</strong></li>
-                        </ul>
+                    <a href="https://public.tableau.com/views/HospitalRatingsDashboard/HospitalSatisfaction" target="_blank" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200">View Dashboard</a>
+                </div>
+                <div class="p-8">
+                    <p class="text-gray-600 mb-8">Analyzed satisfaction rates for 4,300 hospitals. Processed 1.6M records to identify care disparities across 53 territories.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                        <div>
+                            <h5 class="font-bold text-slate-800 mb-2 uppercase text-xs tracking-widest">Design Process</h5>
+                            <p class="text-slate-600">Pivoted wide HCAHPS data to tall format for standardized indicator analysis.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-800 mb-2 uppercase text-xs tracking-widest">Testing</h5>
+                            <p class="text-slate-600">Conducted UX testing with nurses and pharmacists to refine drill-down navigation.</p>
+                        </div>
                     </div>
                 </div>
-            </section>
-            
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="p-8 border-b border-gray-50 bg-slate-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-2xl font-bold text-gray-900">Big Data: U.S. Voter Turnout</h4>
+                        <p class="text-blue-600 font-medium text-sm mt-1 tracking-wide uppercase font-mono">PySpark • Databricks • Distributed Computing</p>
+                    </div>
+                    <span class="px-3 py-1 bg-gray-200 text-gray-700 text-[10px] font-bold uppercase rounded">Case Study</span>
+                </div>
+                <div class="p-8">
+                    <p class="text-gray-600 mb-4">Leveraged Databricks to handle millions of records and analyze household factors affecting voter participation.</p>
+                    <p class="text-sm italic text-slate-500">Key Finding: Homeownership showed strongest correlation with high turnout.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <h3 class="text-2xl font-bold mb-12 border-b pb-2 text-slate-800">Technical Toolkit</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition">
+                    <div class="text-3xl mb-4">💻</div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg">Languages</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 font-medium italic">
+                        <li>Python (Pandas, PyTorch, OpenCV)</li>
+                        <li>R (Tidyverse, ggplot2)</li>
+                        <li>SQL, MATLAB, SAS</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-purple-200 transition">
+                    <div class="text-3xl mb-4">☁️</div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg">Cloud & Big Data</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 font-medium italic">
+                        <li>Databricks, GCP, AzureML</li>
+                        <li>PySpark, SparkSQL</li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-orange-200 transition">
+                    <div class="text-3xl mb-4">🧠</div>
+                    <h4 class="font-bold text-slate-900 mb-3 text-lg">Soft Skills</h4>
+                    <ul class="text-sm text-slate-600 space-y-1 font-medium italic">
+                        <li>Data Storytelling</li>
+                        <li>Analytical Thinking</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div> <div id="modal-backdrop" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-6" onclick="closeModal()">
+        <div id="uw-modal" class="hidden bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-10 transform scale-95 transition-all" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-start mb-6 border-b pb-4">
+                <h5 class="text-2xl font-black text-purple-800">MS Data Science @ UW</h5>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-600 font-semibold">
+                <span>• Data Visualization</span>
+                <span>• Probability & Statistics</span>
+                <span>• Data Management</span>
+                <span>• Software Design</span>
+                <span>• Machine Learning</span>
+            </div>
+        </div>
+        <div id="ucsb-modal" class="hidden bg-white rounded-3xl shadow-2xl max-w-2xl w-full p-10 transform scale-95 transition-all" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-start mb-6 border-b pb-4">
+                <h5 class="text-2xl font-black text-blue-800">BS Stats & Psych @ UCSB</h5>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-600 font-semibold">
+                <span>• Big Data Analytics</span>
+                <span>• Regression Analysis</span>
+                <span>• Time Series</span>
+                <span>• Experimental Design</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById('modal-backdrop').classList.remove('hidden');
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modal-backdrop').classList.add('hidden');
+            document.getElementById('uw-modal').classList.add('hidden');
+            document.getElementById('ucsb-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
