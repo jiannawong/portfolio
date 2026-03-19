@@ -1,4 +1,3 @@
 # jiannawong.github.io
 
-
-[Link](jiannawong.github.io)
+[jiannawong.github.io](https://jiannawong.github.io/))
